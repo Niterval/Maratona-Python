@@ -43,35 +43,3 @@ def menu():
     menu()
 
 link_system()
-
-
-
-
-
-
-
-
-
-
-
-# url_terra = 'https://www.terra.com.br/'
-
-# r = requests.get(url_terra)
-
-# print(r.headers)
-#
-#
-# Criar uma lista para guardar os dados enviados pelo usuário:
-# .
-#
-# O programa deve tratar os erros como por exemplo:
-# remover espaços vazios ao inserir a url
-#
-# verificar se o endereço inserido é um endereço válido ou não
-# se não 'for' válido, informar “Endereço Inválido”
-#
-# inserir o https:// caso o usuário insira apenas o domínio
-# verificar se o domínio está ON ou OFF informando o usuário por mensagem
-#
-# Após uma consulta, perguntar se o usuário que realizar outra ou não, dando apenas a opção dele inserir s/n ou S/N
-# Se optar em não realizar outra consulta, enviar a mensagem “Programa encerrado!”
