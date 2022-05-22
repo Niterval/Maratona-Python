@@ -19,14 +19,13 @@ def link_system():
             try:
                 r = requests.get(link)
                 if r.status_code == 200:
-                    print('Site online!')
+                    print(f"{link}  Site online!")
                 else:
-                    print(f'[{link} Site onffiline]')
+                    print(f"{link}  Site onffiline")
             except:
-                print(f'{link} tente mais tarde!')
-                menu()
-            print('----------------\n')
-            menu()
+                print(f"{link}  Tente mais tarde!")
+                # print('----------------\n')
+    menu()
 
 def menu():
   print("precisa verificar mais algum site? (s/n)")
