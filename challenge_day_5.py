@@ -35,7 +35,7 @@ def menu():
     else:
       selected = country_all[choice]
       print(country)
-      print(f"O pais que vc escolheu: {selected['name']} \n e a moeda é {selected['code']}")
+      print(f"O pais que vc escolheu: {selected['name']} ne a moeda é {selected['code']}")
       print("escolha outro pais: \n")
       menu()
   except:
