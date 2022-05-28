@@ -33,7 +33,7 @@ def by_id():
 # def by_id(id):
 #   url = f"http://hn.algolia.com/api/v1/items/{id}"
 #   resultados = requests.get(url).json()
-#   return render_template('id.html', resultados=resultados)
+#   return render_template('id.html', resultados=resultados)dd
 
 
 
