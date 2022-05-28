@@ -14,31 +14,37 @@ html_doc = r_iban.text
 def menu_source():
   try:
     ## Input moeda de origem
-    choice = int(input('## -> '))
-    if choice > len(country_all):
+    choice_from = int(input('## -> '))
+    if choice_from > len(country_all):
       print("nao tem. escolha um Nº da lista:")
     else:
-      selected = country_all[choice]
+      selected = country_all[choice_from]
       print(f'\n(x): {selected["name"]}\n')
+      ask_country = choice_from
+      money_from = selected["code"]
       menu_destiny()
 
   except:
     print("cara só pode numero. Tente denovo \n")
     menu_source()
+    money_source = money_from
 
 def menu_destiny():
   try:
     ## Input moeda de destino
     print("Informe agora o país de destino da moeda:\n")
-    choice = int(input('## -> '))
-    if choice > len(country_all):
+    choice_to = int(input('## -> '))
+    if choice_to > len(country_all):
       print("nao tem. escolha um Nº da lista:")
     else:
-      selected = country_all[choice]
+      selected = country_all[choice_to]
       print(f'\n(x): {selected["name"]}\n')
-      print(f'Quantos XXX você quer converter pra {selected["code"]}.\n')
+      ask_country = choice_to
+      money_destiny = selected["code"]
+      print(f'Quantos XXX você quer converter pra {money_destiny}.\n')
     ## Input valor de conversão desejado
-    choice = int(input('## -> '))
+    choice_amount = int(input('## -> '))
+    ask_country = choice_amount
       # menu_destiny()
       # print("Informe agora o país de destino da moeda:\n")
 
@@ -59,13 +65,15 @@ for row in rows:
     country = items[0].text
     currency = items[2].text
 
-    if currency != '':
-
+    if currency == '':
+        continue
+    else:
         info_country = {
             'name': country.capitalize(),
             'code': currency
         }
         country_all.append(info_country)
+
 
 
 
@@ -79,15 +87,17 @@ print("\nPelo número, escolha o país de origem da moeda:")
 menu_source()
 
 ### USER VALUES ####
-money_source = ask_country('\n qual o pais de origem do dinheiro?')
-money_destiny = ask_country('\n qual o pais de destino do dinheiro?')
-amount = ask_amount(money_from, money_to)
+# money_source = ask_country('\n qual o pais de origem do dinheiro?')
+# money_destiny = ask_country('\n qual o pais de destino do dinheiro?')
+# amount = ask_amount(money_from, money_to)
 #
-# ### CODES ###
+### CODES ###
+# from_code = money_source['code']
+# to_code = money_destiny['code']
 # from_code = money_source['code']
 # to_code = money_destiny['code']
 #
-#### SCAPING TRANFERWISE ########
+#### SCRAPING TRANFERWISE ########
 # tw_request = requests.get(f"{url_transfwewise}{from_code}-to-{to_code}-rate?amount={amount}", headers={'User-Agent': user_agent})
 # tw_soup = BeautifulSoup(tw_request.text, "html.parser")
 # #pega o rate para calcular
