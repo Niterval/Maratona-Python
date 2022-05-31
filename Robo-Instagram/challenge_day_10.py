@@ -18,8 +18,8 @@ driver.get('https://www.instagram.com/')
 time.sleep(2)
 
 ######### Selecionando elementos de Login ################
-input_user = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('gameconta012@gmail.com')
-input_pssword = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('0102Instagram')
+input_user = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('xxxxxxxx')
+input_pssword = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('xxxxxxxx')
 time.sleep(3)
 
 ############# Pressionadno ENTER para logar ###########
@@ -62,4 +62,4 @@ print(f'{len(list_user_comment)} usuário (únicos) participando do sorteio')
 print(f'O sorteador foi: {choice(list_user_comment)}')
 
 
-driver.quit()
+# driver.quit()
