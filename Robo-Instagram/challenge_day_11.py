@@ -28,8 +28,8 @@ def result():
 	time.sleep(2)
 
 	######## Selecionando elementos de Login ################
-	input_user = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('gameconta012@gmail.com')
-	input_pssword = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('0102Instagram')
+	input_user = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('xxxx')
+	input_pssword = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('xxxxx')
 	time.sleep(3)
 
 	############# Pressionadno ENTER para logar ###########
